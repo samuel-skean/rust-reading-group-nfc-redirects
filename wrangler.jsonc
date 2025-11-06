@@ -1,8 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
+  // TODO: Fix the name so wrangler doesn't complain.
   "name": "time-based-http-redirector",
   "main": "src/index.ts",
-  "compatibility_date": "2025-11-06"
+  "compatibility_date": "2025-11-06",
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
