@@ -21,8 +21,7 @@ app.get("/schedule", async (c) => {
   if (result.length < 1) {
     return c.redirect(DEFAULT_URL);
   }
-  // TODO: Fix!! This produces JSON with escapes in it because the escapes are part of how its stored in the database (I think).
-  return c.json(result[0].jsonData);
+  return c.json(JSON.parse(result[0].jsonData));
 });
 
 app.put("/schedule", async (c) => {
@@ -38,8 +37,7 @@ app.put("/schedule", async (c) => {
     .insert(schema.schedules)
     .values([{ jsonData: await (await c.req.blob()).text() }])
     .returning();
-  // TODO: Fix!! This produces JSON with escapes in it because the escapes are part of how its stored in the database (I think).
-  return c.json(result[0].jsonData);
+  return c.json(JSON.parse(result[0].jsonData));
 });
 
 app.get("/redirect", async (c) => {
