@@ -1,1 +1,4 @@
  - [ ] There's some redundant logic for returning the DEFAULT_URL, specifically in the case that the database is empty.
+- [ ] Auth.
+- [ ] Client app? Apple Shortcuts?
+- [ ] Rewrite it in Rust? lol
