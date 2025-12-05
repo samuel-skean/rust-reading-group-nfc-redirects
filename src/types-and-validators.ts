@@ -1,6 +1,6 @@
 import * as z from "zod/mini";
 
-// Generate with chatgpt: https://chatgpt.com/share/690cac7d-a654-8006-83a0-8185f407bee4
+// Generated with chatgpt: https://chatgpt.com/share/690cac7d-a654-8006-83a0-8185f407bee4
 
 // single range schema
 export const TimeRangeValidator = z
