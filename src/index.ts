@@ -19,7 +19,7 @@ app.get("/schedule", async (c) => {
     .limit(1);
 
   if (result.length < 1) {
-    return c.redirect(DEFAULT_URL);
+    return c.json(null, 200);
   }
   return c.json(JSON.parse(result[0].jsonData));
 });
